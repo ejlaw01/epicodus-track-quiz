@@ -22,7 +22,8 @@ _HTML, CSS, Bootstrap, JavaScript and jQuery_
 
 ### Known bugs
 
-_Quiz favors certain tracks (e.g. CSS/Design) over others in the case of a tie._
+*_Quiz favors certain tracks (e.g. CSS/Design) over others in the case of a tie._
+*_Retake only works once._
 
 ### License
 

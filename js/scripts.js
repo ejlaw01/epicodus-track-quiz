@@ -127,7 +127,6 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-
   $("form#start-quiz").submit(function() {
     $("form#start-quiz").fadeOut('fast', function(){
       $("#question1").fadeIn('fast');
@@ -171,7 +170,10 @@ $(document).ready(function() {
 
   $("form#retake").submit(function() {
     $(".result-info").hide();
-    $("question1").show();
+    $("#question1").show();
+  event.preventDefault();
   });
+
+  //better way than having event preventD with for every function?
 
 });
