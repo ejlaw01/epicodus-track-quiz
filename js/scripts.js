@@ -5,20 +5,18 @@
 
 $(document).ready(function() {
 
-  $("form#button").submit(function(event) {
-
+  $("form#quiz-result").submit(function(event) {
+//I felt like this section was business logic, but it didn't work when I pulled it out of the function.
     var q1 = $("input:radio[name=question1]:checked").val();
     var q2 = $("input:radio[name=question2]:checked").val();
     var q3 = $("input:radio[name=question3]:checked").val();
     var q4 = $("input:radio[name=question4]:checked").val();
     var q5 = $("input:radio[name=question5]:checked").val();
-
     var cssDesign = 0;
     var javaAndroid = 0;
     var phpDrupal = 0;
     var csharpNet = 0;
     var rubyRails = 0;
-
     var result;
 
     if (q1 === "A") {
@@ -32,7 +30,6 @@ $(document).ready(function() {
     } else {
       rubyRails += 1.000001
     }
-
     if (q2 === "A") {
       cssDesign += 1.01
     } else if (q2 === "B") {
@@ -44,7 +41,6 @@ $(document).ready(function() {
     } else {
       rubyRails += 1.000001
     }
-
     if (q3 === "A") {
       cssDesign += 1.01
     } else if (q3 === "B") {
@@ -56,7 +52,6 @@ $(document).ready(function() {
     } else {
       rubyRails += 1.000001
     }
-
     if (q4 === "A") {
       cssDesign += 1.01
     } else if (q4 === "B") {
@@ -68,7 +63,6 @@ $(document).ready(function() {
     } else {
       rubyRails += 1.000001
     }
-
     if (q5 === "A") {
       cssDesign += 1.01
     } else if (q5 === "B") {
@@ -80,9 +74,7 @@ $(document).ready(function() {
     } else {
       rubyRails += 1.000001
     }
-
-//How do I make it display TWO results if they are equal? My solution was to change point values to make it so 2 results cannot be equal, but the problems with this were that it forced me to favor certain results and it wouldn't work well with more questions.
-
+//How do I make it display TWO results if they are equal? My solution was to change point values to make it so 2 results cannot be equal, but the problems with this were that it forced me to favor certain results and it wouldn't always work with a many-question quiz.
     if (cssDesign > javaAndroid && cssDesign > phpDrupal && cssDesign > csharpNet && cssDesign > rubyRails) {
       result = "CSS/Design"
     } else if (javaAndroid > cssDesign && javaAndroid > phpDrupal && javaAndroid > csharpNet && javaAndroid > rubyRails) {
@@ -130,11 +122,56 @@ $(document).ready(function() {
       $("#csharp").hide();
     }
 
-
     // alert("Css: " + cssDesign + " JA: " + javaAndroid + " Php: " + phpDrupal + " C#: " + csharpNet + " RR: " + rubyRails + " result: " + result);
 
     event.preventDefault();
+  });
 
+
+  $("form#start-quiz").submit(function() {
+    $("form#start-quiz").fadeOut('fast', function(){
+      $("#question1").fadeIn('fast');
+    });
+    event.preventDefault();
+  });
+  $("form#question1").change(function() {
+    $("form#question1").fadeOut('fast', function() {
+      $("form#question2").fadeIn('fast');
+    });
+  event.preventDefault();
+  });
+  $("form#question2").change(function() {
+    $("form#question2").fadeOut('fast', function() {
+      $("form#question3").fadeIn('fast');
+    });
+  event.preventDefault();
+  });
+  $("form#question3").change(function() {
+    $("form#question3").fadeOut('fast', function() {
+      $("form#question4").fadeIn('fast');
+    });
+  event.preventDefault();
+  });
+  $("form#question4").change(function() {
+    $("form#question4").fadeOut('fast', function() {
+      $("form#question5").fadeIn('fast');
+    });
+  event.preventDefault();
+  });
+  $("form#question5").change(function() {
+    $("form#question5").fadeOut('fast', function() {
+      $("form#quiz-result").fadeIn('fast');
+    });
+  event.preventDefault();
+  });
+  $("form#quiz-result").submit(function() {
+    $("form#quiz-result").hide();
+  event.preventDefault();
+  });
+
+  $("form#retake").submit(function() {
+    $(".result-info").hide();
+    $("question1").show();
   });
 
 });

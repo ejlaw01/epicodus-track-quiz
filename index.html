@@ -8,14 +8,18 @@
     <title>Track Chooser</title>
   </head>
   <body>
+    <img src="img/epicodus-logo.png">
     <div class="container">
       <h1>Curious what you should codus?</h1>
       <h3>Take our quiz to find out!</h3>
-      <h4>What would you rather create?</h4>
+      <form id="start-quiz">
+        <button type="submit" class="btn-success btn-lg">Start the Quiz</button>
+      </form>
       <form id="question1">
+      <h4>What would you rather create?</h4>
         <div class="radio">
           <label>
-            <input type="radio" name="question1" value="A" checked>
+            <input type="radio" name="question1" value="A">
             A beautiful webpage
           </label>
           <br>
@@ -39,13 +43,13 @@
             An app for a start-up
           </label>
         </div>
+        <hr>
       </form>
-      <hr>
-      <h4>Where would you rather work?</h4>
       <form id="question2">
+        <h4>Where would you rather work?</h4>
         <div class="radio">
           <label>
-            <input type="radio" name="question2" value="A" checked>
+            <input type="radio" name="question2" value="A">
             A marketing agency in Portland
           </label>
           <br>
@@ -69,13 +73,13 @@
             A two-man startup in Seattle
           </label>
         </div>
+        <hr>
       </form>
-      <hr>
-      <h4>What would you be the most proud to have built?</h4>
       <form id="question3">
+        <h4>What would you be the most proud to have built?</h4>
         <div class="radio">
           <label>
-            <input type="radio" name="question3" value="A" checked>
+            <input type="radio" name="question3" value="A">
             National Geographic's website
           </label>
           <br>
@@ -99,13 +103,13 @@
             AirBnb
           </label>
         </div>
+        <hr>
       </form>
-      <hr>
-      <h4>What is your greatest flaw?</h4>
       <form id="question4">
+        <h4>What is your greatest flaw?</h4>
         <div class="radio">
           <label>
-            <input type="radio" name="question4" value="A" checked>
+            <input type="radio" name="question4" value="A">
             I'm sort of vain.
           </label>
           <br>
@@ -129,13 +133,13 @@
             I'm pretty lazy.
           </label>
         </div>
+        <hr>
       </form>
-      <hr>
-      <h4>What do you want in life?</h4>
       <form id="question5">
+        <h4>What do you want in life?</h4>
         <div class="radio">
           <label>
-            <input type="radio" name="question5" value="A" checked>
+            <input type="radio" name="question5" value="A">
             Beauty
           </label>
           <br>
@@ -159,17 +163,14 @@
             Excitement
           </label>
         </div>
+        <hr>
       </form>
-      <hr>
-
-      <form id="button">
-        <button type="submit" class="btn-success">Go!</button>
+      <form id="quiz-result">
+        <button type="submit" class="btn-success btn-lg">Show me my destiny!</button>
       </form>
-
       <h2>Congratulations!</h2>
       <h5>Your result is: <span class="result"></span></h5>
       <div class="result-info">
-
         <div id="css">
           <div class="row">
             <div class="col-sm-6">
@@ -201,18 +202,20 @@
             <div class="col-sm-6">
               <h4>Internship</h4>
               <img src="img/internship.png">
-              <p>As part of Epicodus, local companies host students as full-time interns. It's a chance for students to learn about how development works in the real world, and a chance for companies to work with talented developers in the making.</p>
+              <p>As part of Epicodus, local companies host students as full-time interns. It's a chance for students to learn about how development works in the <strong>real world</strong>, and a chance for companies to work with talented developers in the making.</p>
             </div>
             <div class="col-sm-3">
             </div>
           </div>
+          <form id="retake">
+            <button type="submit" class="btn-md">Take it again</button>
+          </form>
         </div>
-
         <div id="java">
           <div class="row">
             <div class="col-sm-6">
-              <img src="img/intro.png">
               <h4>Intro to Programming</h4>
+              <img src="img/intro.png">
               <p>This course is for absolute beginners to learn the fundamentals of programming. After completing this course, you'll be able to build basic webpages and understand programming fundamentals. <strong>No coding experience is required</strong>, but computer proficiency is necessary.</p>
             </div>
             <div class="col-sm-6">
@@ -244,13 +247,15 @@
             <div class="col-sm-3">
             </div>
           </div>
+          <form id="retake">
+            <button type="submit" class="btn-lg btn-success">Take it again</button>
+          </form>
         </div>
-
         <div id="php">
           <div class="row">
             <div class="col-sm-6">
-              <img src="img/intro.png">
               <h4>Intro to Programming</h4>
+              <img src="img/intro.png">
               <p>This course is for absolute beginners to learn the fundamentals of programming. After completing this course, you'll be able to build basic webpages and understand programming fundamentals. <strong>No coding experience is required</strong>, but computer proficiency is necessary.</p>
             </div>
             <div class="col-sm-6">
@@ -282,13 +287,15 @@
             <div class="col-sm-3">
             </div>
           </div>
+          <form id="retake">
+            <button type="submit" class="btn-md">Take it again</button>
+          </form>
         </div>
-
         <div id="csharp">
           <div class="row">
             <div class="col-sm-6">
-              <img src="img/intro.png">
               <h4>Intro to Programming</h4>
+              <img src="img/intro.png">
               <p>This course is for absolute beginners to learn the fundamentals of programming. After completing this course, you'll be able to build basic webpages and understand programming fundamentals. <strong>No coding experience is required</strong>, but computer proficiency is necessary.</p>
             </div>
             <div class="col-sm-6">
@@ -320,13 +327,15 @@
             <div class="col-sm-3">
             </div>
           </div>
+          <form id="retake">
+            <button type="submit" class="btn-md">Take it again</button>
+          </form>
         </div>
-
         <div id="ruby">
           <div class="row">
             <div class="col-sm-6">
-              <img src="img/intro.png">
               <h4>Intro to Programming</h4>
+              <img src="img/intro.png">
               <p>This course is for absolute beginners to learn the fundamentals of programming. After completing this course, you'll be able to build basic webpages and understand programming fundamentals. <strong>No coding experience is required</strong>, but computer proficiency is necessary.</p>
             </div>
             <div class="col-sm-6">
@@ -358,8 +367,10 @@
             <div class="col-sm-3">
             </div>
           </div>
+          <form id="retake">
+            <button type="submit" class="btn-md">Take it again</button>
+          </form>
         </div>
-
       </div>
     </div>
   </body>
