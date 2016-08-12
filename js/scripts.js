@@ -22,15 +22,15 @@ $(document).ready(function() {
     var result;
 
     if (q1 === "A") {
-      cssDesign += 1.05
+      cssDesign += 1.01
     } else if (q1 === "B") {
-      javaAndroid += 1.04
+      javaAndroid += 1.001
     } else if (q1 === "C") {
-      phpDrupal += 1.03
+      phpDrupal += 1.0001
     } else if (q1 === "D") {
-      csharpNet += 1.02
+      csharpNet += 1.00001
     } else {
-      rubyRails += 1.02
+      rubyRails += 1.000001
     }
 
     if (q2 === "A") {
