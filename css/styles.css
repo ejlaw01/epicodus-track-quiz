@@ -1,4 +1,4 @@
-h1, h3 {
+h1, h3, h4 {
   text-align: center;
 }
 
@@ -6,11 +6,21 @@ h2, h5 {
   display: none;
 }
 
-img.result-info {
-  height: 200px;
-  width: auto;
+.row {
+  padding: 15px;
 }
 
 #css, #java, #php, #csharp, #ruby {
   display: none;
+}
+
+.result-info img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.result-info p {
+  text-align: left;
 }

@@ -98,8 +98,36 @@ $(document).ready(function() {
     $("h2, h5").show();
     $(".result").text(result);
 
-    if (result = "CSS/Design") {
-
+    if (result === "CSS/Design") {
+      $("#css").show();
+      $("#java").hide();
+      $("#php").hide();
+      $("#csharp").hide();
+      $("#ruby").hide();
+    } else if (result === "Java/Android") {
+      $("#java").show();
+      $("#css").hide();
+      $("#php").hide();
+      $("#csharp").hide();
+      $("#ruby").hide();
+    } else if (result === "PhP/Drupal") {
+      $("#php").show();
+      $("#css").hide();
+      $("#java").hide();
+      $("#csharp").hide();
+      $("#ruby").hide();
+    } else if (result === "C#/.NET") {
+      $("#csharp").show();
+      $("#css").hide();
+      $("#java").hide();
+      $("#php").hide();
+      $("#ruby").hide();
+    } else {
+      $("#ruby").show();
+      $("#css").hide();
+      $("#java").hide();
+      $("#php").hide();
+      $("#csharp").hide();
     }
 
 
