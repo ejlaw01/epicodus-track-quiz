@@ -168,11 +168,11 @@ $(document).ready(function() {
   event.preventDefault();
   });
 
-  $("form#retake").submit(function() {
-    $(".result-info").hide();
-    $("#question1").show();
-  event.preventDefault();
-  });
+  // $("form#retake").submit(function() {
+  //   $(".result-info").hide();
+  //   $("#question1").show();
+  // event.preventDefault();
+  // });
 
   //better way than having event preventD with for every function?
 
